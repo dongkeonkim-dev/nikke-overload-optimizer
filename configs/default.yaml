@@ -1,0 +1,41 @@
+# Default Configuration
+
+# Environment
+env:
+  seed: 42
+  debug: false
+  device: "cuda"  # or "cpu"
+
+# Logging
+logging:
+  level: "INFO"
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+  wandb:
+    project: "nikke-overload-optimizer"
+    entity: "dongkeonkim-dev"
+  tensorboard:
+    log_dir: "runs"
+
+# Game Parameters
+game:
+  max_turns: 100
+  state_size: [8, 8]  # 게임 보드 크기
+  action_size: 64     # 가능한 행동 수
+
+# MCTS Parameters
+mcts:
+  num_simulations: 800
+  c_puct: 1.0
+  dirichlet_alpha: 0.3
+  dirichlet_noise: 0.25
+  temperature:
+    start: 1.0
+    end: 0.01
+    decay: 0.98
+
+# Model Architecture
+model:
+  num_channels: 256
+  num_res_blocks: 20
+  value_head_hidden: 256
+  dropout: 0.3 

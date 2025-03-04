@@ -1,0 +1,24 @@
+# Core ML Libraries
+torch>=2.0.0
+numpy>=1.20.0
+numba>=0.56.0
+
+# ML Utils
+wandb>=0.15.0
+tensorboard>=2.13.0
+
+# Testing
+pytest>=7.0.0
+pytest-cov>=4.0.0
+
+# Development
+black>=23.0.0
+isort>=5.12.0
+mypy>=1.0.0
+
+# Monitoring
+memory-profiler>=0.60.0
+
+# Documentation
+sphinx>=7.0.0
+sphinx-rtd-theme>=1.2.0 

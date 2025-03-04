@@ -1,0 +1,35 @@
+# Simulation Configuration
+
+# Import default config
+defaults:
+  - default
+
+# Simulation Parameters
+simulation:
+  # Game Settings
+  game:
+    num_games: 1000
+    save_path: "data/simulations"
+    visualize: true
+    
+  # MCTS Settings
+  mcts:
+    num_simulations: 1600  # 시뮬레이션 시 더 많은 탐색
+    temperature: 0.1      # 더 결정적인 선택
+    
+  # Model Settings
+  model:
+    checkpoint_path: "checkpoints/best_model.pt"
+    batch_size: 32
+    
+  # Logging
+  logging:
+    save_games: true
+    save_frequency: 100
+    plot_stats: true
+    
+  # Performance
+  performance:
+    num_workers: 4
+    use_cuda: true
+    profile: false 
